@@ -28,7 +28,7 @@ The CSVs reflect all search options, including source selection.
 
 ## headlines.json format
 `data/headlines.json` contains an ordered array of 53 items. Each item is an object with a full week's worth of
-headlines from both the WSJ and the NYT. The first item represents the week of Dec 27, 2015, with headlines starting 
+headlines from both The Guardian and the NYT. The first item represents the week of Dec 27, 2015, with headlines starting 
 on Jan 1, 2016. The last object holds headlines from the week of Dec 25, 2016, with headlines through Dec 31, 2016.
 
 ```

@@ -4,7 +4,7 @@ var csv = (function(){
 	function _generateNumeric(type){
 		var lines = [];
 		var weeks = [''].concat(results_ref.results.map(function(w){
-			return w.weekstr;
+			return w.week;
 		}));
 
 		lines.push(weeks);
@@ -39,7 +39,7 @@ var csv = (function(){
 
 		results_ref.results.map(function(w){
 			selected_sources.forEach(function(src){
-				weeks.push(w.weekstr + ' (' + src.toUpperCase() + ')');
+				weeks.push(w.week + ' (' + src.toUpperCase() + ')');
 			});
 		});
 
@@ -94,7 +94,7 @@ var csv = (function(){
 			selected_sources.forEach(function(src){
 				wk[src].articles.map(function(a){
 					if( a == null ) return;
-					lines.push( [src, a.headline, wk.weekstr, a.date, a.article_url] );
+					lines.push( [src, a.headline, wk.week, a.date, a.url] );
 				});
 			});
 		});

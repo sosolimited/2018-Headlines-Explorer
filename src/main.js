@@ -3,11 +3,13 @@ var use_api = false;
 var source_settings = {
 	nyt: {
 		color: '#50E3C2',
-		name: 'New York Times'
+		name: 'New York Times',
+		check_label: 'NYT'
 	},
-	wsj: {
+	guardian: {
 		color: '#7793E9',
-		name: 'Wall Street Journal'
+		name: 'The Guardian',
+		check_label: 'Guardian'
 	}
 };
 
@@ -46,7 +48,7 @@ $("#search-icon").click(function(){
 selected_sources.forEach(function(src){
 	var cb = $("<input checked id='src-"+src+"' class='src-checkbox' type='checkbox' name='"+src+"'>");
 	$("#source_select").append(cb);
-	$("#source_select").append('<label for="src-' + src + '">' + src.toUpperCase() + '</label>');
+	$("#source_select").append('<label for="src-' + src + '">' + source_settings[src].check_label + '</label>');
 });
 
 $("#source_select input").on('change', function(){

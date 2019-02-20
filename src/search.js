@@ -176,7 +176,7 @@ var search = (function(){
 
 		headlines_ref.forEach(function(week,widx){
 			var set = {};
-			set.weekstr = week.weekstr;
+			set.week = week.week;
 
 			selected_sources.forEach(function(src){
 				set[src] = {
@@ -258,7 +258,7 @@ var search = (function(){
 
 		headlines_ref.forEach(function(week){
 			var set = {};
-			set.weekstr = week.weekstr;
+			set.week = week.week;
 				
 			selected_sources.forEach(function(src){
 				set[src] = {

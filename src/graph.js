@@ -89,7 +89,7 @@ var graph = (function(){
 
 			last_day = day;
 			var a = $('<a>');
-			a.attr('href', article.article_url).attr('target','_blank');
+			a.attr('href', article.url).attr('target','_blank');
 
 			if( active_liwc != '' ){
 				a.html( _highlightTerms( article, results_ref.terms_flat.concat(liwc_categories[active_liwc].words), true ) );
@@ -111,7 +111,7 @@ var graph = (function(){
 			att.append('<a href="http://developer.nytimes.com">Data provided by The New York Times</a><br />Copyright (c) 2013 The New York Times Company. All Rights Reserved.');
 		}
 		else {
-			att.append('Data provided by The Wall Street Journal<br />Copyright (c) 2017 Dow Jones & Company, Inc. All Rights Reserved.');
+			att.append('Data provided by <a href="https://open-platform.theguardian.com">The Guardian</a><br />Copyright (c) 2018 Guardian News & Media Limited. All Rights Reserved.');
 		}
 
 		//$("#words").append(att);
@@ -134,7 +134,7 @@ var graph = (function(){
 		_addHeadlines(data, src);
 
 		// add headings
-		var m_s = moment( results_ref.results[idx].weekstr ).subtract(1,'day');
+		var m_s = moment( results_ref.results[idx].week ).subtract(1,'day');
 		var m_e = moment(m_s).add(7,'days');
 
 		var sstr = m_s.year() == m_e.year() ? m_s.format("MMM D") : m_s.format("MMM D, YYYY");
@@ -179,7 +179,7 @@ var graph = (function(){
 
 		var y = d3.scaleLinear().rangeRound([height,0]);
 
-		var _x_dom = results_ref.results.map(function(h){ return h.weekstr; });
+		var _x_dom = results_ref.results.map(function(h){ return h.week; });
 		var _x_labels = _getXLabels(_x_dom);
 
 		x0.domain( _x_dom );
@@ -243,7 +243,7 @@ var graph = (function(){
 		week_group.selectAll('rect')
 			.data(function(d,widx){
 				return Object.keys(d).filter(function(item){
-						return item != 'weekstr';
+						return item != 'week';
 					})
 					.map(function(item){
 						return { 
@@ -270,7 +270,7 @@ var graph = (function(){
 
 					// clear any existing hovers
 					g.selectAll('rect').classed('bar-selected-nyt', false);
-					g.selectAll('rect').classed('bar-selected-wsj', false);
+					g.selectAll('rect').classed('bar-selected-guardian', false);
 					g.selectAll('.hover-arrow').classed('no-show', true);
 
 					d3.select(this).classed('bar-selected-' + d.key, true);
