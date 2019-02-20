@@ -1,13 +1,13 @@
-# 2016 Headlines Visualization
-Explore every 2016 headline from the New York Times and Wall Street Journal. Search for a topic or phrase, 
+# 2018 Headlines Visualization
+Explore every 2018 headline from the New York Times and The Guardian. Search for a topic or phrase, 
 compare the coverage, and download the results. Use this tool for research or for fun. Download the code 
 and make your own visualization.
 
 ## Use
-For a quick spin, visit [https://2016headlines.sosolimited.com](https://2016headlines.sosolimited.com). 
+For a quick spin, visit [https://2018headlines.sosolimited.com](https://2018headlines.sosolimited.com). 
 
 If you'd like to use the page locally, 
-[download a zip archive](https://github.com/sosolimited/2016-Headlines-Explorer/archive/master.zip)
+[download a zip archive](https://github.com/sosolimited/2018-Headlines-Explorer/archive/master.zip)
 and open `index.html` in your browser.
 
 ## Search Features
@@ -33,22 +33,22 @@ on Jan 1, 2016. The last object holds headlines from the week of Dec 25, 2016, w
 
 ```
 [
-    {
-        "wsj": [
-            {
-                "headline": "The Art of Biography",
-                "article_url": "http://www.wsj.com/articles/the-art-of-biography-1451514816",
-                "date": "2016-01-01T05:00:00.000Z",
-                "tokens": ["the", "art", "of", "biography"]
-            },
-            ...
-        ],
-        "nyt": [ 
-            ... 
-        ],
-        "weekstr": "2015W53"
+  {
+    "week": "2018-W01",
+    "nyt": [
+      {
+        "headline": "Tom Brokaw: You Can Find the Entire World Inside Your Hospital",
+        "date": "2018-01-01T00:02:50.000Z",
+        "url": "https://www.nytimes.com/2017/12/31/opinion/tom-brokaw-health-care-immigrants.html",
+        "tokens": ["tom", "brokaw", "you", "can", "find", "the", "entire", "world", "inside", "your", "hospital"]
+      },
+      ...
     },
-    ...
+    "guardian": [
+      ...
+    ]
+  },
+  ...
 ]
 ```
 
@@ -58,7 +58,7 @@ For details on token list generation, see [tokenization.md](tokenization.md);
 
 [![NYT API](img/poweredby_nytimes_200a.png)](https://developer.nytimes.com)
 
-Data provided by the [Wall Street Journal Archive](http://www.wsj.com/public/page/archive.html).
+Data provided by the [The Guardian Open Platform](https://open-platform.theguardian.com).
 
 ## License
 
