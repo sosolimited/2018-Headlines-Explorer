@@ -4,7 +4,7 @@ compare the coverage, and download the results. Use this tool for research or fo
 and make your own visualization.
 
 ## Use
-For a quick spin, visit [https://2018headlines.sosolimited.com](https://2018headlines.sosolimited.com). 
+For a quick spin, visit [https://2018-headlines.sosolimited.com](https://2018-headlines.sosolimited.com). 
 
 If you'd like to use the page locally, 
 [download a zip archive](https://github.com/sosolimited/2018-Headlines-Explorer/archive/master.zip)
