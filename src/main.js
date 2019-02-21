@@ -26,7 +26,7 @@ var _url_liwc = getUrlParameter('liwc');
 // store UI settings
 var selected_sources = Object.keys(source_settings);
 var active_liwc = _url_liwc ? _url_liwc : '';
-var default_search = _url_query ? _url_query : 'brexit';
+var default_search = _url_query ? _url_query : 'facebook';
 var y_axis = '%';
 
 //
