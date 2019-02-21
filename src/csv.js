@@ -30,7 +30,7 @@ var csv = (function(){
 			lines.push( src_lines[k] );
 		});
 
-		return 'data:text/csv;charset=utf-8,' + Papa.unparse(lines,{newline:'%0A'});
+		return URL.createObjectURL( new Blob([Papa.unparse(lines)], {type: 'text/csv;charset=utf-8'}) );
 	}
 
 	function _generateInterestingTerms(){
@@ -76,7 +76,7 @@ var csv = (function(){
 			lines.push(row);
 		}
 
-		return 'data:text/csv;charset=utf-8,' + Papa.unparse(lines,{newline:'%0A'});
+		return URL.createObjectURL( new Blob([Papa.unparse(lines)], {type: 'text/csv;charset=utf-8'}) );
 	}
 
 	function _generateHeadlines(){
@@ -99,7 +99,7 @@ var csv = (function(){
 			});
 		});
 
-		return 'data:text/csv;charset=utf-8,' + Papa.unparse(lines,{newline:'%0A'});
+		return URL.createObjectURL( new Blob([Papa.unparse(lines)], {type: 'text/csv;charset=utf-8'}) );
 	}
 
 	function generateAll(result_set){
