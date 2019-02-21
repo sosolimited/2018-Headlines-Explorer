@@ -1,6 +1,6 @@
 var search = (function(){
 	var interesting_blacklist = ['&','+','—'];
-	var api_url = 'https://2016headlines.sosolimited.com/api/headlines?';
+	var api_url = 'https://2018-headlines.sosolimited.com/api/headlines?';
 
 	var headlines_ref = null;
 	var results_ref = null;
